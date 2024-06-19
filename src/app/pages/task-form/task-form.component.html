@@ -1,0 +1,10 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <h2>{{state}} task</h2>
+    <app-input-default [formGroup]="formulario" formName="title" id="title" label="Title" type="text"></app-input-default>
+    <app-input-default [formGroup]="formulario" formName="description" id="description" label="Description" type="text"></app-input-default>
+    <app-input-default [formGroup]="formulario" formName="responsibilityTo" id="responsibilityTo" label="Responsibility To" type="text"></app-input-default>
+    <div class="buttonsContainer">
+        <button type="submit" class="btn btn-success">{{state}}</button>
+        <button type="button" class="btn btn-danger" routerLink="/menu">Cancel</button>
+    </div>
+</form>

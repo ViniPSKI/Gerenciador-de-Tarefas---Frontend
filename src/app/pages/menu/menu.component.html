@@ -1,0 +1,35 @@
+<div class="container">
+    <button [routerLink]="['/task/create']" class="btn btn-secondary">Nova tarefa</button>
+    <button [routerLink]="['/user']" id="btPerfil" class="btn btn-primary">Perfil</button>
+
+    <div class="taskContainer" *ngIf="tasks$ | async as tasks; else loading">
+        <div class="taskList" *ngFor="let task of tasks">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <p class="card-text">{{ task.description }}</p>
+                <div class="buttonsContainer">
+                  <a [routerLink]="['/task', task.id]" class="btn btn-primary">Visualizar</a>
+                  <a [routerLink]="['/task/edit', task.id]" class="btn btn-warning">Editar</a>
+                  <button class="btn btn-danger" (click)="deleteTask(task.id)">Deletar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #loading>
+    <div class="card" aria-hidden="true">
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">
+            <span class="placeholder col-6"></span>
+          </h5>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+          </p>
+          <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+        </div>
+    </div>      
+</ng-template>

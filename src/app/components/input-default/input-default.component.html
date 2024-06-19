@@ -1,0 +1,9 @@
+<div class="form-group" [formGroup]="formGroup">
+    <div class="col-sm-12">
+        <label [attr.for]="id" class="control-label">{{ label }}</label>
+    </div>
+    <div class="col-sm-12">
+        <input [type]="type" class="form-control" [id]="id" 
+        [placeholder]="label" [formControlName]="formName">
+    </div> 
+</div>

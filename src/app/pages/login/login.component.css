@@ -1,0 +1,14 @@
+*{
+    margin: 5px;
+}
+
+.card{
+    left: 25%;
+    width: 50%;
+}
+
+.buttonsContainer{
+    margin-top: -3%;
+    display: flex;
+    gap: 10px;
+}

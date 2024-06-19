@@ -1,0 +1,45 @@
+.card{
+    display: flex;
+    margin-top: 5%;
+    color: rgb(90, 82, 82);
+    padding: 2%;
+}
+.card h4{
+    color: rgb(24, 24, 24);
+}
+
+.annotationPublish{
+    margin-top: 1%;
+    display: inline-block;
+}
+
+#btPublish{
+    position: relative;
+    margin-left: -15%;
+    margin-bottom: 6%;
+}
+
+textarea{
+    background-color: rgba(219, 219, 219, 0.837);
+    border-color: rgba(219, 219, 219, 0.837);
+    border-radius: 8px;
+    border: none;
+    resize: none;
+}
+
+.annotation::before{
+    content: '|';
+    color: rgb(73, 33, 202); 
+    width: 5px;
+    font-size: 1.2em;
+    background-color: rgb(73, 33, 202);
+    border-radius: 2px;
+}
+
+h5{
+    color: rgb(135, 133, 133);
+}
+
+.card b{
+    margin-left: 10%;
+}

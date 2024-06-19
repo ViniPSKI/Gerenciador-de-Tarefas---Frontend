@@ -1,0 +1,7 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <h2>Register new user</h2>
+    <app-input-default [formGroup]="formulario" formName="email" id="email" label="Email" type="text"></app-input-default>
+    <app-input-default [formGroup]="formulario" formName="password" id="password" label="Password" type="password" ></app-input-default>
+    <button type="submit" class="btn btn-success">Create</button>
+    <button type="button" class="btn btn-danger" routerLink="">Cancel</button>
+</form>

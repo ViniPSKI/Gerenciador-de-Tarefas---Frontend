@@ -1,0 +1,9 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <h2>Perfil</h2>
+    <app-input-default [formGroup]="formulario" formName="email" id="email" label="Email" type="text"></app-input-default>
+    <app-input-default [formGroup]="formulario" formName="password" id="password" label="Password" type="password" ></app-input-default>
+    <app-input-default [formGroup]="formulario" formName="confirmPassword" id="password" label="Confirm Password" type="password" ></app-input-default>
+    <button type="submit" class="btn btn-success">Edit</button>
+    <button type="button" class="btn btn-warning" routerLink="/menu">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="deleteUser()">Delete</button>
+</form>

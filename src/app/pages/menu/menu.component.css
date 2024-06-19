@@ -1,0 +1,37 @@
+.container{
+    padding: 5px;
+}
+
+.taskContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+  
+.buttonsContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.taskList {
+    flex: 1 1 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+  
+.card {
+    width: 100%;
+    flex-grow: 1;
+}
+
+#btPerfil{
+    background-color: rgb(95, 90, 192);
+    border-color: rgb(83, 78, 166);
+}
+
+#btPerfil:hover{
+    background-color: rgb(87, 81, 172);
+}

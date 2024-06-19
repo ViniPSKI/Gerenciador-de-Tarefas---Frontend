@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="taskContainer">
+        <div class="card">
+          <h4>{{task.title}}</h4>
+          <label>Autor<b>{{ task.createBy }}</b></label>
+          <p>Descrição<b>{{ task.description }}</b></p>
+        </div>
+    </div>
+    <div class="annotationPublish">
+      <textarea   
+        cols="50" 
+        rows="5" 
+        placeholder="Anotação" 
+        [(ngModel)]="annotation" 
+        class="txtAnnotation">
+      </textarea>
+      <button id="btPublish" class="btn btn-primary" (click)="publishArtifact()">Publicar</button>
+    </div>
+
+    <div class="annotatiosContainer" *ngIf="artifacts$ | async as artifacts; else loading;">
+      <h5>Anotações</h5>
+      <div class="annotation" *ngFor="let artifact of artifacts">
+        <label>Publicado por: <b>{{ artifact.createBy }}</b></label>
+        <p>{{ artifact.annotation }}</p>
+      </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-5"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+    </p> 
+</ng-template>
